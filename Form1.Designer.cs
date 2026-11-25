@@ -54,7 +54,7 @@
             btnPercent = new Button();
             btnEqual = new Button();
             tableLayoutPanel1 = new TableLayoutPanel();
-            label1 = new Label();
+            calcResult = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
             tableLayoutPanel4 = new TableLayoutPanel();
             tableLayoutPanel2.SuspendLayout();
@@ -113,6 +113,7 @@
             btnDot.TabIndex = 23;
             btnDot.Text = ".";
             btnDot.UseVisualStyleBackColor = true;
+            btnDot.Click += btnDot_Click;
             // 
             // btnZero
             // 
@@ -123,6 +124,7 @@
             btnZero.TabIndex = 22;
             btnZero.Text = "0";
             btnZero.UseVisualStyleBackColor = true;
+            btnZero.Click += btnZero_Click;
             // 
             // btnSign
             // 
@@ -133,6 +135,7 @@
             btnSign.TabIndex = 21;
             btnSign.Text = "+/-";
             btnSign.UseVisualStyleBackColor = true;
+            btnSign.Click += btnSign_Click;
             // 
             // btnPlus
             // 
@@ -143,6 +146,7 @@
             btnPlus.TabIndex = 20;
             btnPlus.Text = "+";
             btnPlus.UseVisualStyleBackColor = true;
+            btnPlus.Click += btnPlus_Click;
             // 
             // btn3
             // 
@@ -153,7 +157,7 @@
             btn3.TabIndex = 19;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
-            btn3.Click += btnThree_Click;
+            btn3.Click += btn3_Click;
             // 
             // btn2
             // 
@@ -164,6 +168,7 @@
             btn2.TabIndex = 18;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = true;
+            btn2.Click += btn2_Click;
             // 
             // btn1
             // 
@@ -174,6 +179,7 @@
             btn1.TabIndex = 17;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = true;
+            btn1.Click += btn1_Click;
             // 
             // btnMinus
             // 
@@ -184,6 +190,7 @@
             btnMinus.TabIndex = 16;
             btnMinus.Text = "-";
             btnMinus.UseVisualStyleBackColor = true;
+            btnMinus.Click += btnMinus_Click;
             // 
             // btn4
             // 
@@ -194,6 +201,7 @@
             btn4.TabIndex = 15;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = true;
+            btn4.Click += btn4_Click;
             // 
             // btn5
             // 
@@ -204,6 +212,7 @@
             btn5.TabIndex = 14;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = true;
+            btn5.Click += btn5_Click;
             // 
             // btn6
             // 
@@ -214,6 +223,7 @@
             btn6.TabIndex = 13;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
+            btn6.Click += btn6_Click;
             // 
             // btnMulti
             // 
@@ -224,6 +234,7 @@
             btnMulti.TabIndex = 12;
             btnMulti.Text = "×";
             btnMulti.UseVisualStyleBackColor = true;
+            btnMulti.Click += btnMulti_Click;
             // 
             // btn7
             // 
@@ -234,6 +245,7 @@
             btn7.TabIndex = 11;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = true;
+            btn7.Click += btn7_Click;
             // 
             // btn8
             // 
@@ -244,6 +256,7 @@
             btn8.TabIndex = 10;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = true;
+            btn8.Click += btn8_Click;
             // 
             // btn9
             // 
@@ -254,6 +267,7 @@
             btn9.TabIndex = 9;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
+            btn9.Click += btn9_Click;
             // 
             // btnDivision
             // 
@@ -264,6 +278,7 @@
             btnDivision.TabIndex = 8;
             btnDivision.Text = "÷";
             btnDivision.UseVisualStyleBackColor = true;
+            btnDivision.Click += btnDivision_Click;
             // 
             // button7
             // 
@@ -304,6 +319,7 @@
             btnDelete.TabIndex = 4;
             btnDelete.Text = "⌫";
             btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // btnClear
             // 
@@ -350,7 +366,7 @@
             // 
             tableLayoutPanel1.ColumnCount = 1;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
-            tableLayoutPanel1.Controls.Add(label1, 0, 0);
+            tableLayoutPanel1.Controls.Add(calcResult, 0, 0);
             tableLayoutPanel1.Location = new Point(0, 71);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
@@ -359,17 +375,16 @@
             tableLayoutPanel1.Size = new Size(333, 80);
             tableLayoutPanel1.TabIndex = 5;
             // 
-            // label1
+            // calcResult
             // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("맑은 고딕", 30F);
-            label1.Location = new Point(3, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(327, 70);
-            label1.TabIndex = 0;
-            label1.Text = "calcResult";
-            label1.TextAlign = ContentAlignment.BottomRight;
+            calcResult.AutoSize = true;
+            calcResult.Dock = DockStyle.Fill;
+            calcResult.Font = new Font("맑은 고딕", 30F);
+            calcResult.Location = new Point(3, 0);
+            calcResult.Name = "calcResult";
+            calcResult.Size = new Size(327, 70);
+            calcResult.TabIndex = 0;
+            calcResult.TextAlign = ContentAlignment.BottomRight;
             // 
             // tableLayoutPanel3
             // 
@@ -446,7 +461,7 @@
         private Button btnPlus;
         private TableLayoutPanel tableLayoutPanel1;
         private TableLayoutPanel tableLayoutPanel3;
-        private Label label1;
+        private Label calcResult;
         private TableLayoutPanel tableLayoutPanel4;
     }
 }
